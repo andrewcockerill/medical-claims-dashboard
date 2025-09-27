@@ -1,0 +1,40 @@
+{
+  "raw_sources": [
+    {
+        "uri": "https://www.cms.gov/medicare/coding/icd9providerdiagnosticcodes/downloads/icd-9-cm-v32-master-descriptions.zip",
+        "filename": "CMS32_DESC_LONG_DX.txt",
+        "is_archive": true,
+        "format": {"type": "fwf", "colspecs": [[0,5], [6,null]]},
+        "columns": [
+            {"name": "icd9_code", "dtype": "string"},
+            {"name": "icd9_desc", "dtype": "string"}
+        ],
+        "options": {"sample_size": null},
+        "table_name": "T_ICD9_DESCRIPTIONS"
+    },
+
+    {
+        "uri": "https://www.cms.gov/research-statistics-data-and-systems/downloadable-public-use-files/synpufs/downloads/de1_0_2008_to_2010_outpatient_claims_sample_1.zip",
+        "filename": "DE1_0_2008_to_2010_Outpatient_Claims_Sample_1.csv",
+        "is_archive": true,
+        "format": {"type": "csv", "delimiter": ","},
+        "columns": [
+            {"name": "CLM_ID", "dtype": "int64"},
+            {"name": "SEGMENT", "dtype": "int64"},
+            {"name": "CLM_FROM_DT", "dtype": "date", "format": "%Y%m%d"},
+            {"name": "CLM_PMT_AMT", "dtype": "float"},
+            {"name": "ICD9_DGNS_CD_1", "dtype": "string"},
+            {"name": "ICD9_DGNS_CD_2", "dtype": "string"},
+            {"name": "ICD9_DGNS_CD_3", "dtype": "string"},
+            {"name": "ICD9_DGNS_CD_4", "dtype": "string"}
+        ],
+        "options": {"sample_size": null},
+        "table_name": "T_SYNPUF_OUTPATIENT_CLAIMS"
+    }
+  ],
+
+  "database": "medical_claims.db",
+
+  "random_seed": 1
+}
+

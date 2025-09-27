@@ -1,0 +1,11 @@
+SELECT
+    *
+FROM
+    {claims_table_name}
+WHERE
+    (ICD9_DGNS_CD_1 IS NOT NULL
+    OR ICD9_DGNS_CD_2 IS NOT NULL
+    OR ICD9_DGNS_CD_3 IS NOT NULL
+    OR ICD9_DGNS_CD_4 IS NOT NULL)
+    AND
+    SEGMENT = 1

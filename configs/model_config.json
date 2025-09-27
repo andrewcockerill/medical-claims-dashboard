@@ -1,0 +1,15 @@
+{
+    "icd_columns": ["ICD9_DGNS_CD_1", "ICD9_DGNS_CD_2" , "ICD9_DGNS_CD_3", "ICD9_DGNS_CD_4"],
+    "vector_size": 10,
+    "window": 4,
+    "min_count": 1,
+    "n_clusters": 4,
+    "model_file": "model.pkl",
+    "model_dev_query": "model_dev_query.sql",
+    "cluster_desc_query": "cluster_desc_query.sql",
+    "cluster_pmt_totals_query": "cluster_pmt_totals_query.sql",
+    "cluster_column": "DIAGNOSIS_CLUSTER",
+    "clusters_table_name": "T_SYNPUF_OUTPATIENT_CLAIMS_CLUSTERS",
+    "cluster_desc_table_name": "T_SYNPUF_OUTPATIENT_CLAIMS_CLUSTER_DESC",
+    "cluster_pmt_totals_table_name": "T_SYNPUF_OUTPATIENT_CLAIMS_CLUSTER_PMT_TOTALS"
+}
